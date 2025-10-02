@@ -1,0 +1,29 @@
+a = int(input("Въведи стойност за a: "))
+b = int(input("Въведи стойност за b: "))
+
+print(f"Преди размяната: a = {a}, b = {b}")
+
+a = a + b
+b = a - b
+a = a - b
+
+print(f"След размяната: a = {a}, b = {b}")
+import math
+
+r = float(input("Въведете радиуса на вписаната окръжност: "))
+
+# страна на триъгълника
+a = 2 * math.sqrt(3) * r  
+
+# площ на триъгълника
+S_triangle = (a * a * math.sqrt(3)) / 4  
+
+# площ на окръжността
+S_circle = math.pi * r * r  
+
+# разлика
+delta = S_triangle - S_circle
+
+print(f"Площ на триъгълника: {S_triangle:.2f}")
+print(f"Площ на окръжността: {S_circle:.2f}")
+print(f"Разликата е: {delta:.2f}")
